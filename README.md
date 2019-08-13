@@ -197,7 +197,7 @@
 .elem {
     -moz-box-shadow:2px 2px 2px #000;
     -webkit-box-shadow:2px 2px 2px #000;
-    -o--box-shadow:2px 2px 2px #000;
+    -o-box-shadow:2px 2px 2px #000;
     -ms-box-shadow:2px 2px 2px #000;
     box-shadow:2px 2px 2px #000;
 }
@@ -220,11 +220,51 @@
 
 ### UI개발 필수
 - 변수
+```javascript
+var name = 'bk'l;
+var num = 1;
+var boolean = true;
+```
 - 함수
+```javascript
+function plus(){
+    return 1 + 1;
+}
+```
 - loop (반복)
+```javascript
+for(var i; i < 5; i++){
+    alert(i);
+}
+```
 - if (조건)
+```javascript
+if(true){
+    alert(true);
+}
+```
 - scope (범위)
+```javascript
+//전역변수 (global var)
+var i = 0;
+function scope(){
+    //지역변수 (local var)
+    var i = 1;
+}
+scope();
+alert(i);
+```
 - DOM선택
+```html
+<!-- HTML -->
+<button id="button"></button>
+```
+```javascript
+//Javascript
+var $button = document.getElementById('button');
+//jQuery
+var $button = $('#button');
+```
 ...
 
 ### 플러그인, 라이브러리 사용 (응용)
