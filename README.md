@@ -223,7 +223,7 @@
 ```javascript
 var name = 'bk'l;
 var num = 1;
-var boolean = true;
+var is = true;
 ```
 - 함수
 ```javascript
@@ -262,6 +262,7 @@ alert(i);
 ```javascript
 //Javascript
 var $button = document.getElementById('button');
+
 //jQuery
 var $button = $('#button');
 ```
