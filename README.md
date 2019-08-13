@@ -1,4 +1,4 @@
-# 실전 웹퍼블리싱 커리큘럼
+# 실전 웹퍼블리싱
 
 ## HTML, 이건 꼭 알고가자
 ### DOCTYPE
@@ -39,13 +39,42 @@
 - ol li > 순서있는 목록
 - dl dt dd > 정의형 목록
 - p > 문단, 문장
+```HTML
+<p>내가 다니는 학교는 ㅇㅇ고등학교 입니다.</p>
+```
 - br > 줄바꿈
+```HTML
+<p>내가 다니는 학교는<br>ㅇㅇ고등학교 입니다.</p>
+```
 - div > 의미없는 블럭
+```HTML
+<div>
+    <p>내가 다니는 학교는 ㅇㅇ고등학교 입니다.</p>
+</div>
+```
 - span > 의미없는 태그
+```HTML
+<p>내가 다니는 학교는 <span>ㅇㅇ고등학교</span>입니다.</p>
+```
 - strong > 강조
+```HTML
+<p>내가 다니는 학교는 <strong>ㅇㅇ고등학교</strong>입니다.</p>
+```
 - em > 강조
+```HTML
+<p>내가 다니는 학교는 <em>ㅇㅇ고등학교</em>입니다.</p>
+```
 - a > 링크
+```HTML
+<a href="page.html">페이지이동</a>
+```
 - figure figcaption > 이미지나 차트 등을 설명하는 문구
+```HTML
+<figure>
+    <img src="banana.jpg" alt="바나나">
+    <figcaption>나무에 걸려있는 바나나 (사진:작가)</figcaption>
+</figure>
+```
 
 ### 작성 시 주의할 내용
 - 스크립트는 페이지 최하단에 위치하도록 (로드포함)
@@ -67,6 +96,7 @@
 ```CSS
 ::after, ::before, :nth-child, :first-child, :last-child
 ```
+- vendor prefix
 ```CSS
 .elem {
     -moz-box-shadow:2px 2px 2px #000;
@@ -83,7 +113,7 @@
 - 미디어쿼리
 ```html
 <!-- html파일 내 조건 css로드(768px 이하일때 해당 css로드) -->
-<link rel="stylesheet" media="screen and (max-width: 768px)" href="mystyle.css" />
+<link rel="stylesheet" media="screen and (max-width: 768px)" href="mobile-style.css" />
 ```
 ```CSS
 /*css내부 작성 (768px 이하일때 스타일 적용)*/
