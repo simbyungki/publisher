@@ -19,6 +19,15 @@
 ```
 
 ### HTML TAG list
+- meta > 서버와 브라우저 간의 정보 정의
+```html
+<!-- 검색 엔진에 의해 검색되는 단어 지정 -->
+<meta name="Keywords" content="Web, html" />
+<!-- 검색 결과에 표시되는 문자 지정 -->
+<meta name="Description" content="web과 html을 공부합니다." />
+...
+<!-- https://webclub.tistory.com/354 -->
+```
 - header > 헤더
 - main > 주요 콘텐츠
 - footer > 푸터
@@ -46,7 +55,7 @@
 
 ---
 ## CSS, 이건 꼭 알고가자
-- 대부분의 속성이 실제로도 사용됨
+- 대부분의 속성이 실제로 사용됨
 
 ### 레이아웃 필수
 - block, inline
@@ -54,13 +63,32 @@
 - float (zoom)
 - flex(*)
 - line-height
-- 가상클래스 ::after, ::before, :nth-child, :first-child, :last-child
-- vendor prefix -moz-, -webkit-, -o-, -ms-, '' (box-shadow, border-radius...)
-- 세로정렬 layout > (absolute 50%, margin-top), (absolute 50%, transform:translate), (table-cell, vertical-align:middle)
-- 미디어쿼리 > 
-  - file load(<link rel="stylesheet" media="screen and (max-width: 768px)" href="mystyle.css" /> (768px 이하일때 해당 css로드)
-  - css 내부 @media screen and (max-width: 768px) {color:...} (768px 이하일때 스타일 적용)
-
+- 가상클래스 
+```CSS
+::after, ::before, :nth-child, :first-child, :last-child
+```
+```CSS
+.elem {
+    -moz-box-shadow:2px 2px 2px #000;
+    -webkit-box-shadow:2px 2px 2px #000;
+    -o--box-shadow:2px 2px 2px #000;
+    -ms-box-shadow:2px 2px 2px #000;
+    box-shadow:2px 2px 2px #000;
+}
+```
+- 세로정렬 layout
+```CSS
+(absolute 50%, margin-top), (absolute 50%, transform:translate), (table-cell, vertical-align:middle)
+```
+- 미디어쿼리
+```html
+<!-- html파일 내 조건 css로드(768px 이하일때 해당 css로드) -->
+<link rel="stylesheet" media="screen and (max-width: 768px)" href="mystyle.css" />
+```
+```CSS
+/*css내부 작성 (768px 이하일때 스타일 적용)*/
+@media screen and (max-width: 768px) {color:... }
+```
 ---
 ## 자바스크립트, 이건 꼭 알고가자
 
@@ -83,12 +111,12 @@
 ## 유용한 사이트 
 - 테스트 코드 작성(샘플) > https://www.jsfiddle.net
 - 웹사이트 트렌드 > CSSDA > https://www.cssdesignawards.com/
-- 
+
 
 ---
-## 실제 레이아웃 실습
-### PC ()
+## 레이아웃 실습
+### PC - 도미노피자 (https://web.dominos.co.kr/main?locale=ko)
 
-### Mobile ()
+### Mobile - LG UPLUS (http://lguplus.co.kr/home/Index.hpi)
 
-### Responsive (https://studio-jt.co.kr/)
+### Responsive - STUDIO-JT (https://studio-jt.co.kr/)
