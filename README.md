@@ -28,16 +28,96 @@
 ...
 <!-- https://webclub.tistory.com/354 -->
 ```
-- header > 헤더
-- main > 주요 콘텐츠
+- header > 헤더(네비게이션이나 페이지에 대한 정보(로고 등))
+```HTML
+<header>
+    <h1>LOGO</h1>
+    <nav>
+        <ul>
+            <li><a href="#">메뉴1</a></li>
+            <li><a href="#">메뉴2</a></li>
+            <li><a href="#">메뉴3</a></li>
+            <li><a href="#">메뉴4</a></li>
+        </ul>
+    </nav>
+</header>
+```
+- main > 문서의 주요 콘텐츠 (페이지 당 1번 사용)
+```HTML
+<!-- IE에서 지원하지 않기때문에 ARIA role을 추가 -->
+<main role="main">
+    <p>문서의 주요한 내용</p>
+</main>
+```
 - footer > 푸터
+```HTML
+<footer>
+    <strong><img src="logo.png" alt="company"></strong>
+    <p>copyright...</p>
+</footer>
+```
 - nav > 메뉴, 네비게이션
-- article > 콘텐츠 묶음
-- section > 영역 분리
+```HTML
+<nav>
+    <ul>
+        <li><a href="#">메뉴1</a></li>
+        <li><a href="#">메뉴2</a></li>
+        <li><a href="#">메뉴3</a></li>
+        <li><a href="#">메뉴4</a></li>
+    </ul>
+</nav>
+```
+- article > 내용이 각기 독립적이며, 홀로 사용할 수 있는 내용
+```HTML
+<!-- 주로 블로그, 포럼, 뉴스 기사 등에 사용 -->
+<article>
+    <h1>홍콩공항 운영 재개...아침 8시쯤 첫 이륙</h1>
+    <p>
+        현재 공항 내 항공기 출발과 도착을 안내하는 게시판에는 다수의 항공기가 '곧 탑승'을 시작한다는 메시지가 올라와 있습니다.
+    </p>
+</article>
+```
+- section > 서로 관계 있는 문서를 분리하는 역할 (문서를 다른 주제로 구분 짓기 위해 사용)
+```HTML
+<!-- 내용이 서로 관계가 있다면 section으로 구분 -->
+<section>
+    <h1>HTML</h1>
+    <p>Hyper Text Markup Language</p>
+</section>
+<section>
+    <h1>CSS</h1>
+    <p>Cascading Style Sheet</p>
+</section>
+```
 - aside > 주 내용과 연관이 있으나 필수가 아닌 경우
 - ul li > 순서없는 목록
+```HTML
+<ul>
+    <li>수박</li>
+    <li>참외</li>
+    <li>사과</li>
+    <li>메론</li>
+</ul>
+```
 - ol li > 순서있는 목록
+```HTML
+<ol>
+    <li>회원가입 버튼 클릭</li>
+    <li>정보 입력</li>
+    <li>완료</li>
+    <li>로그인</li>
+    <li>서비스 이용</li>
+</ol>
+```
 - dl dt dd > 정의형 목록
+```HTML
+<dl>
+    <dt>HTML</dt>
+    <dd>Hyper Text Markup Language</dd>
+    <dt>CSS</dt>
+    <dd>Cascading Style Sheet</dd>
+</dl>
+```
 - p > 문단, 문장
 ```HTML
 <p>내가 다니는 학교는 ㅇㅇ고등학교 입니다.</p>
