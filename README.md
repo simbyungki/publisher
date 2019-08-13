@@ -90,6 +90,22 @@
 </section>
 ```
 - aside > 주 내용과 연관이 있으나 필수가 아닌 경우
+```HTML
+<header>HTML</header>
+<!-- article내부에 존재할 경우 연관이 있는 내용 -->
+<article>
+    <h1>article</h1>
+    <p>article is ...</p>
+    <aside>
+        <a href="#">article태그 실습</a>
+    </aside>
+</article>
+<!-- article내부에 존재할 경우 전체 페이지와 연관이 있는 내용 -->
+<aside>
+    <a href="#">HTML태그 목록</a>
+</aside>
+
+```
 - ul li > 순서없는 목록
 ```HTML
 <ul>
