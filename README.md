@@ -186,8 +186,32 @@
 - block, inline
 - position (fixed, relative, absolute)
 - float (zoom)
+```HTML
+<ul>
+    <li><a href="#">메뉴 1</a></li>
+    <li><a href="#">메뉴 2</a></li>
+    <li><a href="#">메뉴 3</a></li>
+    <li><a href="#">메뉴 4</a></li>
+</ul>
+```
+```CSS
+ul {zoom:1;}
+ul:after {display:block; content:""; clear:both;}
+ul li {float:left;}
+```
 - flex(*)
-- line-height
+```HTML
+<ul>
+    <li><a href="#">메뉴 1</a></li>
+    <li><a href="#">메뉴 2</a></li>
+    <li><a href="#">메뉴 3</a></li>
+    <li><a href="#">메뉴 4</a></li>
+</ul>
+```
+```CSS
+ul {display:flex;}
+ul li {flex-direction:row;}
+```
 - 가상클래스 
 ```CSS
 ::after, ::before, :nth-child, :first-child, :last-child
@@ -221,7 +245,7 @@
 ### UI개발 필수
 - 변수
 ```javascript
-var name = 'bk'l;
+var name = 'bk';
 var num = 1;
 var is = true;
 ```
@@ -230,6 +254,23 @@ var is = true;
 function plus(){
     return 1 + 1;
 }
+```
+- 배열
+```javascript
+var arr = [1, 'bk', plus()];
+arr[1];
+```
+- 객체
+```javascript
+var obj = {
+    name: 'bk',
+    age: 22,
+    fnc: function(){
+        return 1 + 1;
+    },
+}
+obj.name;
+obj.fnc();
 ```
 - loop (반복)
 ```javascript
