@@ -236,7 +236,10 @@
 ---
 ## 유용한 사이트 
 - 테스트 코드 작성(샘플) > https://www.jsfiddle.net
-- 웹사이트 트렌드 > CSSDA > https://www.cssdesignawards.com/
+- 웹사이트 트렌드 CSSDA > https://www.cssdesignawards.com/
+- 브라우저 지원여부 CAN I USE > https://caniuse.com/
+- HTML 검수 W3C > http://validator.w3.org/#validate_by_input+with_options
+- CSS 검수 W3C > http://jigsaw.w3.org/css-validator/
 
 
 ---
