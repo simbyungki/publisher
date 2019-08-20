@@ -338,7 +338,7 @@ var $button = $('#button');
 
 ---
 ## 진행 일정 (예상)
-1. ~~기초 설명 (html, css, javascript 이론) > 과제 (PC실습 도미노피자)~~  
+1. ~~2019/08/17 : 기초 설명 (html, css, javascript 이론) > 과제 (PC실습 도미노피자)~~  
 2. 과제 리뷰, 설명 (jquery 실습 > 이벤트) > 과제 (PC실습 도미노피자)
     - 이벤트 : 클릭, resize, scroll, load ...
 3. 과제 리뷰, 웹 UI 만들기 실습 > tab 콘텐츠, GNB > 과제 (PC실습 도미노피자 마무리)
