@@ -338,9 +338,9 @@ var $button = $('#button');
 
 ---
 ## 진행 일정 (예상)
-1. 기초 설명 (html, css, javascript 이론) > 과제 (PC실습 도미노피자)
+~~1. 기초 설명 (html, css, javascript 이론) > 과제 (PC실습 도미노피자)~~
 2. 과제 리뷰, 설명 (jquery 실습 > 이벤트) > 과제 (PC실습 도미노피자)
- - 이벤트 : 클릭, resize, scroll, load ...
+    - 이벤트 : 클릭, resize, scroll, load ...
 3. 과제 리뷰, 웹 UI 만들기 실습 > tab 콘텐츠, GNB > 과제 (PC실습 도미노피자 마무리)
 4. 과제 리뷰, 웹 UI 만들기 실습 > 레이어팝업 > 과제 (스크롤 위치에 따른 header 걸치기 UI)
 5. 모바일 레이아웃 기본(실습), 웹 UI 만들기(css 햄버거 버튼)
