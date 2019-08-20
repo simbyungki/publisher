@@ -312,7 +312,7 @@ var $button = $('#button');
 ### 플러그인, 라이브러리 사용 (응용)
 - 플러그인 (컴포넌트) modal, slider...
 - 라이브러리 (비슷한 성격을 가진 컴포넌트들의 집합체) jQuery..
-- 웹에서 자주 쓰이는 플러그인 > swiperjs, chartjs
+- 웹에서 자주 쓰이는 플러그인 > swiperjs ...
 - 샘플 가져와서 사용하기
 
 ---
@@ -326,8 +326,29 @@ var $button = $('#button');
 
 ---
 ## 레이아웃 실습
-### PC - 도미노피자 (https://web.dominos.co.kr/main?locale=ko)
 
-### Mobile - LG UPLUS (http://lguplus.co.kr/home/Index.hpi)
+### 실전 레이아웃
+- 다단 반응형 레이아웃 (/sample/layout_responsive.html)
+- 
 
-### Responsive - STUDIO-JT (https://studio-jt.co.kr/)
+### 레이아웃 실습
+#### PC - 도미노피자 (https://web.dominos.co.kr/main?locale=ko)
+
+#### Responsive - STUDIO-JT (https://studio-jt.co.kr/)
+
+---
+## 진행 일정 (예상)
+1. 기초 설명 (html, css, javascript 이론) > 과제 (PC실습 도미노피자)
+2. 과제 리뷰, 설명 (jquery 실습 > 이벤트) > 과제 (PC실습 도미노피자)
+ - 이벤트 : 클릭, resize, scroll, load ...
+3. 과제 리뷰, 웹 UI 만들기 실습 > tab 콘텐츠, GNB > 과제 (PC실습 도미노피자 마무리)
+4. 과제 리뷰, 웹 UI 만들기 실습 > 레이어팝업 > 과제 (스크롤 위치에 따른 header 걸치기 UI)
+5. 모바일 레이아웃 기본(실습), 웹 UI 만들기(css 햄버거 버튼)
+6. 반응형 웹 레이아웃 만들기 실습 (sample) > 과제 studio-jt 메인 마크업
+7. 과제 리뷰, 웹 UI 만들기 이미지 슬라이더(swiperjs) > 과제 studio-jt css
+8. 과제 리뷰, 실습 studio-jt
+9. 과제 리뷰, 실습 studio-jt
+...
+
+
+
