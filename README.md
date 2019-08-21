@@ -185,7 +185,7 @@
 ### 레이아웃 필수
 - block, inline
 - box model
-  - ![css box model](./images/css_box_model_chrome.png)
+  - ![css box model](./images/css_box_model_chrome.png = 350)
 - position (fixed, relative, absolute)
 - float (zoom)
 ```HTML
