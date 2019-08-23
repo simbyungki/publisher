@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="referrer" content="always">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=2.0">
+    <title>swiperjs</title>
+    <link rel="stylesheet" href="../resources/css/reset.css">
+    <link rel="stylesheet" href="../resources/css/swiper.css">
+    <style>
+        #wrap {padding-top:105px}
+
+        header {position:fixed; left:0; top:0; z-index:1000; width:100%; background:#fff;}
+        header h1 {line-height:52px; color:#fff; text-align:center; background:#111;}
+        header .gnb {border-bottom:1px solid #444;}
+        header .gnb > ul {margin:0 auto; width:960px; text-align:center;}
+        header .gnb > ul > li {display:inline-block; position:relative; padding:0 40px;}
+        header .gnb > ul > li > a {display:block; height:52px; line-height:52px; color:#444; font-weight:600; text-align:center; box-sizing:border-box; transition:all .2s;}
+        header .gnb > ul > li:hover > a {color:#0095e1; border-bottom:4px solid #0095e1;}
+        header .gnb ul .subMenu {display:none; position:absolute; top:52px; left:50%; transform:translateX(-50%); padding-top:10px;}
+        header .gnb ul .subMenu ul {padding:10px; border-radius:10px; box-sizing:border-box; background:#fff; box-shadow:0px 2px 5px rgba(0,0,0,0.3);}
+        header .gnb > ul > li:hover .subMenu {display:block;}
+        header .gnb ul .subMenu li a {display:block; height:30px; line-height:30px; color:#444; font-size:12px; text-align:center;}
+        header .gnb ul .subMenu li a:hover {text-decoration:underline;}
+        main .visual {height:500px;}
+        main .visual .swiper-slide {display:flex; align-items:center; justify-content:center; height:500px;}
+        main .visual .swiper-slide p {color:#fff; font-size:50px; font-weight:600;}
+        main .visual .swiper-slide.first {background:sandybrown;}
+        main .visual .swiper-slide.second {background:seagreen;}
+        main .visual .swiper-slide.third {background:slategray;}
+        main .visual .swiper-slide.fourth {background:tomato;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <h1>Swiperjs</h1>
+            <nav class="gnb">
+                <ul>
+                    <li>
+                        <a href="javascript:;">메뉴01</a>
+                        <div class="subMenu">
+                            <ul>
+                                <li><a href="javascript:;">MENU0101</a></li>
+                                <li><a href="javascript:;">MENU0102</a></li>
+                                <li><a href="javascript:;">MENU0103</a></li>
+                                <li><a href="javascript:;">MENU0104</a></li>
+                                <li><a href="javascript:;">MENU0105</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:;">두번째메뉴02</a>
+                        <div class="subMenu">
+                            <ul>
+                                <li><a href="javascript:;">MENU0201</a></li>
+                                <li><a href="javascript:;">MENU0202</a></li>
+                                <li><a href="javascript:;">MENU0203</a></li>
+                                <li><a href="javascript:;">MENU0204</a></li>
+                                <li><a href="javascript:;">MENU0205</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:;">카테고리03</a>
+                        <div class="subMenu">
+                            <ul>
+                                <li><a href="javascript:;">MENU0301</a></li>
+                                <li><a href="javascript:;">MENU0302</a></li>
+                                <li><a href="javascript:;">MENU0303</a></li>
+                                <li><a href="javascript:;">MENU0304</a></li>
+                                <li><a href="javascript:;">MENU0305</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:;">지엔비04</a>
+                        <div class="subMenu">
+                            <ul>
+                                <li><a href="javascript:;">MENU0401</a></li>
+                                <li><a href="javascript:;">MENU0402</a></li>
+                                <li><a href="javascript:;">MENU0403</a></li>
+                                <li><a href="javascript:;">MENU0404</a></li>
+                                <li><a href="javascript:;">MENU0405</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:;">MENU05</a>
+                        <div class="subMenu">
+                            <ul>
+                                <li><a href="javascript:;">MENU0501</a></li>
+                                <li><a href="javascript:;">MENU0502</a></li>
+                                <li><a href="javascript:;">MENU0503</a></li>
+                                <li><a href="javascript:;">MENU0504</a></li>
+                                <li><a href="javascript:;">MENU0505</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:;">GNB06</a>
+                        <div class="subMenu">
+                            <ul>
+                                <li><a href="javascript:;">MENU0601</a></li>
+                                <li><a href="javascript:;">MENU0602</a></li>
+                                <li><a href="javascript:;">MENU0603</a></li>
+                                <li><a href="javascript:;">MENU0604</a></li>
+                                <li><a href="javascript:;">MENU0605</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main role="main">
+            <div class="visual swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide first"><p>111</p></div>
+                    <div class="swiper-slide second"><p>222</p></div>
+                    <div class="swiper-slide third"><p>333</p></div>
+                    <div class="swiper-slide fourth"><p>444</p></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Javascript -->
+    <script type="text/javascript" src="../resources/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../resources/js/swiper.min.js"></script>
+    <script>
+        var sampleSlider = new Swiper('main .visual', {
+            //options   
+            navigation: {
+                nextEl: 'main .visual .swiper-button-next',
+                prevEl: 'main .visual .swiper-button-prev'
+            },
+            pagination: {
+                el: 'main .visual .swiper-pagination'
+            }
+        });
+    </script>
+</body>
+</html>

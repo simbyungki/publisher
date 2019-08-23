@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="referrer" content="always">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=2.0">
+    <title>follow mouse pointer</title>
+    <link rel="stylesheet" href="../resources/css/reset.css">
+    <style>
+        #wrap {display:flex; justify-content:center; align-items:center; height:100vh;}
+        .box {display:flex; justify-content:center; align-items:center; width:150px; height:150px; border:5px solid #000; border-radius:50em;}
+        .box .point {position:relative; width:100%; height:20px; transform:rotate(90deg);}
+        .box .point:after {display:block; content:""; position:absolute; right:0; top:0; width:20px; height:20px; background:#000; border-radius:50em;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="box box01">
+            <div class="point"></div>
+        </div>    
+        <div class="box box02">
+            <div class="point"></div>
+        </div>    
+    </div>
+
+    <!-- Javascript -->
+    <script>
+        var circlePoint = function(thisClass){
+            var circle = document.querySelector('.' + thisClass),
+            point = circle.querySelector('.point'),
+            circleArea = circle.getBoundingClientRect();
+        
+            var rotatePoint = function(mouseX, mouseY){
+                var radian = Math.atan2(mouseY - (circleArea.y + circleArea.height * 0.5), mouseX - (circleArea.x + circleArea.width * 0.5));
+                point.style.transform = 'rotate(' + (180 * radian / Math.PI) + 'deg)';
+            }  
+
+            return {
+                rotatePoint: rotatePoint
+            };
+        }
+
+        var point01 = circlePoint('box01');
+        var point02 = circlePoint('box02');
+
+        window.addEventListener('mousemove', function(e){
+            point01.rotatePoint(e.pageX, e.pageY);
+            point02.rotatePoint(e.pageX, e.pageY);
+        });
+
+    </script>
+</body>
+</html>

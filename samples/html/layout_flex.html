@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="referrer" content="always">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=2.0">
+    <title>Layout 01</title>
+    <link rel="stylesheet" href="../resources/css/reset.css">
+    <link rel="stylesheet" href="../resources/css/swiper.css">
+    <style>
+        #wrap {margin:0 auto; height:100vh; max-width:1480px; background:yellow;}
+        .list {display:flex; height:100vh;}
+        .list li {}
+        .list li article {padding:5%; box-sizing:border-box;}   
+        .list li:nth-child(1) article {background:#999;}
+        .list li:nth-child(2) article {background:#666;}
+        .list li:nth-child(3) article {background:#333;}
+        .list li:nth-child(4) article {background:#000;}
+        .list li:nth-child(5) article {background:yellowgreen;}
+        .list li:nth-child(3) article h1,
+        .list li:nth-child(4) article h1,
+        .list li:nth-child(3) article p,
+        .list li:nth-child(4) article p {color:#fff;}
+        .list li article h1 {margin-bottom:20px; color:#000;}
+        .list li article p {line-height:24px;}
+        footer {padding:5%; background:#555;}
+        footer p {color:#fff; font-weight:600;}
+
+    </style>
+
+</head>
+<body>
+    <div id="wrap">
+        <ul class="list">
+            <li>
+                <article>
+                    <h1>article01</h1>
+                    <p>Lorem ipsum dolor sit</p>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <h1>article02</h1>
+                    <p>Lorem ipsum dolor sit</p>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <h1>article03</h1>
+                    <p>Lorem ipsum dolor sit</p>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <h1>article04</h1>
+                    <p>Lorem ipsum dolor sit</p>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <h1>article04</h1>
+                    <p>Lorem ipsum dolor sit</p>
+                </article>
+            </li>
+        </ul>
+        <!--
+        <footer>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> 
+        </footer>
+        -->
+    </div>
+
+    <!-- Javascript -->
+    <script type="text/javascript" src="../resources/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../resources/js/swiper.min.js"></script>
+    <script>
+    $(function(){
+        
+    });
+    </script>
+</body>
+</html>

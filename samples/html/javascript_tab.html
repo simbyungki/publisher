@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="referrer" content="always">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=2.0">
+    <title>tab UI</title>
+    <link rel="stylesheet" href="../resources/css/reset.css">
+    <link rel="stylesheet" href="../resources/css/swiper.css">
+    <style>
+        h1 {line-height:52px; color:#fff; text-align:center; background:#111;}
+
+        .tabContentGroup {margin:30px auto; max-width:960px;}
+        .tabContentGroup .tabMenu ul {zoom:1;}
+        .tabContentGroup .tabMenu ul:after {display:block; content:""; clear:both;}
+        .tabContentGroup .tabMenu ul li {float:left; width:50%; border:1px solid #444; border-left:0; box-sizing:border-box;}
+        .tabContentGroup .tabMenu ul li:first-child {border-left:1px solid #444;}
+        .tabContentGroup .tabMenu ul li a {display:block; height:40px; line-height:40px; color:#444; text-align:center;}
+        .tabContentGroup .tabMenu ul li.active a {color:#fff; background:#444;}
+        .tabContentGroup .tabMenu.three ul li {float:left; width:33.33%;}
+        .tabContentGroup .tabMenu.four ul li {width:25%;}
+        .tabContentGroup .tabMenu.five ul li {width:20%;}
+        .tabContentGroup .contents {padding:40px 30px; border:1px solid #444; border-top:0;}
+        .tabContentGroup .contents .content {display:none;}
+        .tabContentGroup .contents .content.active {display:block;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1>Tab UI</h1>
+        <div class="tabContentGroup">
+            <nav class="tabMenu four">
+                <ul>
+                    <li class="active"><a href="javascript:;">MENU01</a></li>
+                    <li><a href="javascript:;">MENU02</a></li>
+                    <li><a href="javascript:;">MENU03</a></li>
+                    <li><a href="javascript:;">MENU04</a></li>
+                </ul>
+            </nav>
+            <div class="contents">
+                <div class="content active">CONTENT01</div>
+                <div class="content">CONTENT02</div>
+                <div class="content">CONTENT03</div>
+                <div class="content">CONTENT04</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Javascript -->
+    <script type="text/javascript" src="../resources/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../resources/js/swiper.min.js"></script>
+    <script>
+        var $tabMenuLi = $('.tabContentGroup .tabMenu li'),
+            $tabContent = $('.tabContentGroup .contents .content');
+        /* type01 */
+        $('.tabContentGroup .tabMenu li a').on('click', function(){
+            var i = $(this).parent('li').index();
+            $tabMenuLi.removeClass('active').eq(i).addClass('active');
+            $tabContent.removeClass('active').eq(i).addClass('active');
+        });
+        
+        /* type02 
+        function changeTabContent(idx){
+            $tabMenuLi.removeClass('active').eq(idx).addClass('active');
+            $tabContent.removeClass('active').eq(idx).addClass('active');
+        }
+        */
+    </script>
+</body>
+</html>

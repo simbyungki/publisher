@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="referrer" content="always">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=2.0">
+    <title>click event</title>
+    <link rel="stylesheet" href="../resources/css/reset.css">
+    <link rel="stylesheet" href="../resources/css/swiper.css">
+    <style>
+        header {position:fixed; left:0; top:0; width:100%; line-height:52px; text-align:center; background:#111;}
+        header h1 {color:#fff; font-size:16px;}
+        #wrap {margin:0 auto; padding-top:52px; max-width:1000px;}
+        p {padding:20px; line-height:20px; color:#444; font-size:14px;}
+        ul {zoom:1;}
+        ul:after {display:block; content:""; clear:both;}
+        ul li {float:left; width:25%; line-height:40px; color:#444; font-size:15px; text-align:center; background:#999;}
+        ul li.active {color:#fff; background:#222;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header><h1>event, scroll, offset, position</h1></header>    
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium asperiores hic veritatis expedita sit neque magni enim rerum vel, iure temporibus eveniet. Optio sapiente doloribus amet, saepe aspernatur cupiditate! Quas?
+        </p>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium asperiores hic veritatis expedita sit neque magni enim rerum vel, iure temporibus eveniet. Optio sapiente doloribus amet, saepe aspernatur cupiditate! Quas?
+        </p>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium asperiores hic veritatis expedita sit neque magni enim rerum vel, iure temporibus eveniet. Optio sapiente doloribus amet, saepe aspernatur cupiditate! Quas?
+        </p>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium asperiores hic veritatis expedita sit neque magni enim rerum vel, iure temporibus eveniet. Optio sapiente doloribus amet, saepe aspernatur cupiditate! Quas?
+        </p>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium asperiores hic veritatis expedita sit neque magni enim rerum vel, iure temporibus eveniet. Optio sapiente doloribus amet, saepe aspernatur cupiditate! Quas?
+        </p>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium asperiores hic veritatis expedita sit neque magni enim rerum vel, iure temporibus eveniet. Optio sapiente doloribus amet, saepe aspernatur cupiditate! Quas?
+        </p>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium asperiores hic veritatis expedita sit neque magni enim rerum vel, iure temporibus eveniet. Optio sapiente doloribus amet, saepe aspernatur cupiditate! Quas?
+        </p>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium asperiores hic veritatis expedita sit neque magni enim rerum vel, iure temporibus eveniet. Optio sapiente doloribus amet, saepe aspernatur cupiditate! Quas?
+        </p>
+        <ul>
+            <li class="active">menu01</li>
+            <li>menu02</li>
+            <li>menu03</li>
+            <li>menu04</li>
+        </ul>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium asperiores hic veritatis expedita sit neque magni enim rerum vel, iure temporibus eveniet. Optio sapiente doloribus amet, saepe aspernatur cupiditate! Quas?
+        </p>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium asperiores hic veritatis expedita sit neque magni enim rerum vel, iure temporibus eveniet. Optio sapiente doloribus amet, saepe aspernatur cupiditate! Quas?
+        </p>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium asperiores hic veritatis expedita sit neque magni enim rerum vel, iure temporibus eveniet. Optio sapiente doloribus amet, saepe aspernatur cupiditate! Quas?
+        </p>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium asperiores hic veritatis expedita sit neque magni enim rerum vel, iure temporibus eveniet. Optio sapiente doloribus amet, saepe aspernatur cupiditate! Quas?
+        </p>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium asperiores hic veritatis expedita sit neque magni enim rerum vel, iure temporibus eveniet. Optio sapiente doloribus amet, saepe aspernatur cupiditate! Quas?
+        </p>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium asperiores hic veritatis expedita sit neque magni enim rerum vel, iure temporibus eveniet. Optio sapiente doloribus amet, saepe aspernatur cupiditate! Quas?
+        </p>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium asperiores hic veritatis expedita sit neque magni enim rerum vel, iure temporibus eveniet. Optio sapiente doloribus amet, saepe aspernatur cupiditate! Quas?
+        </p>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium asperiores hic veritatis expedita sit neque magni enim rerum vel, iure temporibus eveniet. Optio sapiente doloribus amet, saepe aspernatur cupiditate! Quas?
+        </p>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium asperiores hic veritatis expedita sit neque magni enim rerum vel, iure temporibus eveniet. Optio sapiente doloribus amet, saepe aspernatur cupiditate! Quas?
+        </p>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium asperiores hic veritatis expedita sit neque magni enim rerum vel, iure temporibus eveniet. Optio sapiente doloribus amet, saepe aspernatur cupiditate! Quas?
+        </p>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium asperiores hic veritatis expedita sit neque magni enim rerum vel, iure temporibus eveniet. Optio sapiente doloribus amet, saepe aspernatur cupiditate! Quas?
+        </p>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium asperiores hic veritatis expedita sit neque magni enim rerum vel, iure temporibus eveniet. Optio sapiente doloribus amet, saepe aspernatur cupiditate! Quas?
+        </p>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium asperiores hic veritatis expedita sit neque magni enim rerum vel, iure temporibus eveniet. Optio sapiente doloribus amet, saepe aspernatur cupiditate! Quas?
+        </p>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium asperiores hic veritatis expedita sit neque magni enim rerum vel, iure temporibus eveniet. Optio sapiente doloribus amet, saepe aspernatur cupiditate! Quas?
+        </p>
+        
+    </div>
+
+    <!-- Javascript -->
+    <script type="text/javascript" src="../resources/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../resources/js/swiper.min.js"></script>
+    <script>
+        $(window).on('scroll', function(){
+            var nowScrollTop = $(window).scrollTop();
+            console.log(nowScrollTop)
+        });
+    </script>
+</body>
+</html>
