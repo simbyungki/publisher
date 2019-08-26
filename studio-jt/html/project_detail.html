@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="referrer" content="always">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no, address=no, email=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+    <!-- No cache -->
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache; no-store; no-save">
+    <!-- Summary -->
+    <meta property="og:title" content="project BK">
+    <meta property="og:description" content="project BK">
+    <title>PROJECT BK</title>
+    <!--<link rel="shortcut icon" href="../favicon.ico" />-->
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="../resources/css/iropke.css">
+
+    <link rel="stylesheet" type="text/css" href="../resources/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="../resources/css/swiper.css">   
+    <link rel="stylesheet" type="text/css" href="../resources/css/style.css"> 
+    <!--[if lt IE 9]>
+		<script src="../resources/js/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+<style>
+.subContainer {padding-top:0;}
+
+.projectDetail .pDetailHeader {position:fixed; left:0; top:0; width:100%;}
+.projectDetail .pDetailHeader .subject {position:absolute; left:50%; top:50%; transform:translate(-50%, -50%); line-height:60px; color:#fff; font-size:50px; text-align:center;}
+.projectDetail .pDetailCont {position:relative; background:#fff;}
+.projectDetail .pDetailCont .summaryBox {margin:0 auto; padding:90px 0; max-width:800px;}
+.projectDetail .pDetailCont .summaryBox .title {line-height:46px; color:#444; font-size:38px; font-weight:600;}
+.projectDetail .pDetailCont .summaryBox .infos {margin-top:40px; zoom:1;}
+.projectDetail .pDetailCont .summaryBox .infos:after {display:block; content:""; clear:both;}
+.projectDetail .pDetailCont .summaryBox .infos dl {float:left; margin-left:5%; width:30%;}
+.projectDetail .pDetailCont .summaryBox .infos dl:first-child {margin-left:0;}
+.projectDetail .pDetailCont .summaryBox .infos dl dt,
+.projectDetail .pDetailCont .summaryBox .infos dl dd {display:block; padding:12px 0;}
+.projectDetail .pDetailCont .summaryBox .infos dl dt {font-size:20px; font-weight:600; border-bottom:2px solid #444;}
+.projectDetail .pDetailCont .summaryBox .summary {margin-top:30px; line-height:28px; color:#666; font-size:20px;}
+.projectDetail .pDetailCont .btnMove {display:block; margin-top:40px; width:200px; height:60px; line-height:60px; text-align:center; background:#444; border-radius:3px;}
+.projectDetail .pDetailCont .btnMove span {display:inline-block; position:relative; padding-right:50px; color:#fff; font-size:16px; font-weight:600;}
+.projectDetail .pDetailCont .btnMove span:after {display:block; content:"→"; position:absolute; right:0; top:50%; transform:translateY(-50%);}
+
+.projectDetail .pDetailCont .actionCont {position:relative; top:20px; opacity:0; padding:100px 0; transition:all .5s;}
+.projectDetail .pDetailCont .actionCont.active {animation-name:actionCont; animation-duration:.6s; animation-timing-function:linear; top:0; opacity:1; transition:all .5s;}
+.projectDetail .pDetailCont .actionCont img {display:block; width:100%;}
+.projectDetail .pDetailCont .actionCont .innerBox {margin:0 auto; max-width:800px;}
+.projectDetail .pDetailCont .actionCont .innerBox strong {display:block; color:#444; font-size:34px;}
+.projectDetail .pDetailCont .actionCont .innerBox p {margin-top:32px; line-height:30px; color:#666; font-size:20px;}
+
+@keyframes actionCont {
+    50% {top:-30px;}
+    100% {top:0;}
+}
+</style>    
+    <div id="wrap" class="projectView">
+        <!-- header -->
+        <header class="header">
+            <h1 class="bi"><a href="index.html">BYUN<br>LOGO</a></h1>
+            <p class="message">I <span>SEOUL</span> U</p>
+            <button class="menuButtonWrap">
+                <span class="txtView"></span>
+                <div class="buttonView">
+                    <span class="bar01"></span>
+                    <span class="bar02"></span>
+                    <span class="bar03"></span>
+                </div>
+            </button>
+            <nav class="slideMenu">
+                <div class="dim"></div>
+                <div class="menuBox">
+                    <ul>
+                        <li><a href="javascript:;">MENU01</a></li>
+                        <li><a href="javascript:;">MENU02</a></li>
+                        <li><a href="javascript:;">MENU03</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- //header -->
+
+        <!-- container -->
+        <div class="commonContainer subContainer">            
+            <main class="projectDetail" role="main">
+                <header class="pDetailHeader" style="background:url('../resources/images/project/project_detail_sample.jpg') no-repeat center; background-size:cover;">
+                    <p class="subject">
+                        PROJECT NAME<br>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                </header>
+                <div class="pDetailCont">
+                    <!-- 프로젝트 개요 -->
+                    <div class="summaryBox">
+                        <p class="title">PROJECT NAME 제작 (UI개발 100%)</p>
+                        <div class="infos">
+                            <dl>
+                                <dt>CLIENT</dt>
+                                <dd>CLIENT NAME</dd>
+                            </dl>
+                            <dl>
+                                <dt>RELEASE DATE</dt>
+                                <dd>2019.04</dd>
+                            </dl>
+                            <dl>
+                                <dt>TYPE</dt>
+                                <dd>반응형웹, ADMIN</dd>
+                            </dl>
+                        </div>
+                        <p class="summary">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident rem eos, doloremque nemo expedita cupiditate libero magni reiciendis neque eius magnam sapiente! Veritatis temporibus, et earum dolor vero accusantium facere.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident rem eos, doloremque nemo expedita cupiditate libero magni reiciendis neque eius magnam sapiente! Veritatis temporibus, et earum dolor vero accusantium facere.
+                        </p>
+                        <a href="javascript:;" class="btnMove"><span>사이트 바로가기</span></a>
+                    </div>
+
+                    <!-- 프로젝트 상세 -->
+                    <div class="actionCont">
+                        <img src="../resources/images/project/project_detail_sample2.jpg" alt="">
+                    </div>
+                    <div class="actionCont">
+                        <div class="innerBox">
+                            <strong>퍼포먼스 최적화형 웹</strong>
+                            <p>
+                                컨텐츠 로딩속도 최적화를 위해 lazyload방식을 채택, 페이지 간의 지연시간을 최소화 시킴으로<br>
+                                보다 빠르고 특별한 사용자 경험을 제공합니다.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="actionCont">
+                        <img src="../resources/images/project/project_detail_sample3.jpg" alt="">
+                    </div>
+                </div>
+            </main>
+        </div>
+        <!-- //container -->
+
+        <!-- footer -->
+        <footer class="footer">
+            <div class="innerBox">
+                <div class="topRow">
+                    <div class="info">
+                        <address class="address">
+                            부산 해운대구 센텀중앙로 97 
+                            센텀스카이비즈 A동 1602호, 1603호 
+                        </address>
+                        <p class="tel">070-7566-1981</p>
+                        <a href="javascript:;" class="btnViewMap" title="지도보기"></a>
+                    </div>
+                    <div class="btns">
+                        <a href="javascript:;" class="btn as">A/S신청</a>
+                        <a href="javascript:;" class="btn request">프로젝트 의뢰하기</a>
+                    </div>
+                </div>
+                <div class="bottomRow">
+                    <div class="snsRow">
+                        <ul class="linkList">
+                            <li class="instagram"><a href="javascript:;" target="_blank">인스타그램</a></li>
+                            <li class="facebook"><a href="javascript:;" target="_blank">페이스북</a></li>
+                            <li class="pinterest"><a href="javascript:;" target="_blank">핀터레스트</a></li>
+                        </ul>
+                        <a href="javascript:;" class="btnLike"></a>
+                    </div>
+                    <p class="copyright">COPYRIGHT 2012-2019 STUDIO-JT. ALL RIGHTS RESERVED.</p>
+                </div>
+            </div>
+        </footer>
+        <!-- //footer -->
+    </div>
+
+    <!-- page 이동 애니메이션 -->
+    <div class="mask m01"></div>
+    <div class="mask m02"></div>
+    <div class="mask m03"></div>
+    <div class="loading"><img src="../resources/images/common/img_loading.png" alt=""></div>
+
+    <!-- Javascript -->
+    <script type="text/javascript" src="../resources/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../resources/js/swiper.min.js"></script>
+    <script type="text/javascript" src="../resources/js/common.js"></script>
+    <script>
+        //content animate
+        
+        $(function(){
+            //detail header height set
+            var winH = $(window).height();
+            $('.pDetailHeader').css({
+                'height': winH
+            });
+            $('.pDetailCont').css({
+                'margin-top': winH
+            });
+
+            //page animation out
+            //$('.mask, .loading').addClass('active');
+            //setTimeout(pageMoveFin, 2000);
+        })
+
+        //Contents animate
+        var $aniCont = $('.actionCont');
+        var aniContLength = $aniCont.length;
+        var aniContOffsetTops = [];
+        for(var i = 0; i < aniContLength; i++){
+            var aniContOffset = $aniCont.eq(i).offset();
+            //콘텐츠보다 50px 아래로 스크롤 시 애니메이트
+            aniContOffsetTops.push(aniContOffset.top + 50);
+        }
+
+        $(window).on('scroll', function(){
+            var scTop = $(window).scrollTop();
+            var calcOpacity = 1 - (scTop * 0.002);
+            $('.projectDetail .pDetailHeader .subject').css({
+                'opacity': calcOpacity
+            });
+
+            //Contents animate
+            for(var i = 0; i < aniContLength; i++){
+                if(scTop > aniContOffsetTops[i]){
+                    $aniCont.eq(i).addClass('active');
+                }else if(scTop < aniContOffsetTops[i]){
+                    $aniCont.eq(i).removeClass('active');
+                }
+            }
+        });
+    </script>
+</body>
+</html>

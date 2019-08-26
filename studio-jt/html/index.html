@@ -22,135 +22,12 @@
     <link rel="stylesheet" type="text/css" href="../resources/css/reset.css">
     <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="../resources/css/swiper.css">   
-    <link rel="stylesheet" type="text/css" href="../resources/css/content.css"> 
+    <link rel="stylesheet" type="text/css" href="../resources/css/style.css"> 
     <!--[if lt IE 9]>
 		<script src="../resources/js/html5shiv.min.js"></script>
 	<![endif]-->
 </head>
-<body>
-<style>
-
-body {cursor:url('../resources/images/common/cursor-pointer.png'), auto;}
-a,
-button {cursor:url('../resources/images/common/cursor-hand.png'), auto;}
-a:active,
-button:active {cursor:url('../resources/images/common/cursor-click.png') 12 12, auto;}
-
-.commonContainer {padding-top:100px; transition:all .3s;}
-.mainContainer {margin:0 auto; width:100%; max-width:1200px;}
-.projectList {width:100%;}
-.projectList ul {zoom:1;}
-.projectList ul:after {display:block; content:""; clear:both;}
-.projectList .list .item {position:relative; float:left; padding-top:50%; width:50%; background-size:cover; overflow:hidden;}
-.projectList .list .item > a {position:absolute; left:0; top:0; width:100%; height:100%;}
-.projectList .list .item > a img {display:none;}
-.projectList .list .item .client {position:absolute; left:20px; bottom:20px; z-index:10; color:#fff; font-size:18px; font-weight:600;}
-.projectList .list .item .detailWrap {opacity:0; position:absolute; left:0; top:0; width:100%; height:100%; text-align:center; background:rgba(0,0,0,.8); transition:all .3s;}
-.projectList .list .item a:hover .detailWrap {opacity:1;}
-.projectList .list .item .detail {position:absolute; left:0; top:50%; transform:translateY(-50%); padding:0 20px; width:calc(100% - 40px);}
-.projectList .list .item .detail .bar {display:block; margin:0 auto; width:35px; height:4px; background:#fff;}
-.projectList .list .item .detail .subject,
-.projectList .list .item .detail .date {color:#fff;}
-.projectList .list .item .detail .subject {margin-top:30px; font-size:22px; font-weight:600;}
-.projectList .list .item .detail .date {margin-top:10px; font-size:12px;}
-.projectList .list .item .detail .arrow {display:block; position:relative; left:50%; margin:24px 0 0 -43px; width:46px; height:12px; background:url('../resources/images/common/icon-arrow-right.png') no-repeat center; opacity:0; transition:all .3s;}
-.projectList .list .item a:hover .detail .arrow {margin-left:-23px; opacity:1;}
-.projectList .btnItemLoad {display:block; margin-top:30px; padding:15px 0; width:100%; color:#444; font-size:18px; font-weight:600; text-align:center;}
-.projectList .btnItemLoad:before {display:block; content:"↓";}
-
-.header {position:fixed; left:0; top:0; z-index:1000; width:100%; height:100px; transition:all .3s;}
-.header .bi {display:block; position:absolute; left:32px; top:22px; width:65px; height:65px; text-align:center;}
-.header .bi a {display:block; line-height:32px; color:#666; font-size:20px; font-weight:600; transition:all .3s;}
-.header .message {visibility:visible; line-height:100px; color:#444; font-size:22px; font-weight:600; text-align:center;}
-.header .message span {display:inline-block; color:tomato; animation:scaleBounce 3s linear infinite; transition:transform .3s; animation-play-state:play;}
-.header .message.stop span {animation-play-state:paused;}
-.header.minSize .message {visibility:hidden;}
-.header .menuButtonWrap {display:block; position:absolute; right:32px; top:22px; z-index:1100; width:66px; height:66px; border:1px solid #444; transition:all .3s;}
-.header .menuButtonWrap .txtView {position:absolute; content:"MENU"; left:-70px; top:50%; transform:translateY(-50%); transition:all .3s;}
-.header .menuButtonWrap .txtView:after {display:block; content:"MENU"; color:#333; font-size:16px; font-weight:600; transition:all .3s;}
-.header .menuButtonWrap.active .txtView:after {content:"CLOSE";}
-.header .menuButtonWrap .buttonView {display:block; position:absolute; left:50%; top:50%; transform:translate(-50%, -50%); width:22px; height:18px;}
-.header .menuButtonWrap .buttonView span {display:block; position:absolute; left:0; width:100%; height:4px; background:#333; transition:all .3s}
-.header .menuButtonWrap .buttonView .bar01 {top:0;}
-.header .menuButtonWrap .buttonView .bar03 {bottom:0;}
-.header .menuButtonWrap .buttonView .bar02 {top:50%; margin-top:-2px; width:50%; opacity:1;}
-.header .menuButtonWrap:hover .buttonView .bar02 {width:90%;}
-.header .menuButtonWrap.active {background:#333;}
-.header .menuButtonWrap.active .buttonView span {background:#fff;}
-.header .menuButtonWrap.active .buttonView .bar01 {transform:matrix(0.7071, 0.7071, -0.7071, 0.7071, 0, 7);}
-.header .menuButtonWrap.active .buttonView .bar03 {transform:matrix(0.7071, -0.7071, 0.7071, 0.7071, 0, -7);}
-.header .menuButtonWrap.active .buttonView .bar02 {left:70%; opacity:0;}
-
-.slideMenu {position:fixed; left:0; top:0; z-index:1000;}
-.slideMenu .dim {visibility:hidden; opacity:0; position:fixed; left:0; top:0; z-index:1000; width:100%; height:100%; background:rgba(0,0,0,.6); transition:all .3s;}
-.slideMenu .menuBox {position:fixed; right:-500px; top:0; z-index:1100; padding:60px; width:500px; height:100%; box-sizing:border-box; background:#fff; opacity:0; transition:all .3s;}
-.slideMenu .menuBox ul {position:absolute; top:50%; transform:translateY(-50%); width:calc(100% - 120px);}
-.slideMenu .menuBox ul li a {display:block; position:relative; padding:7px 0; color:#666; font-size:32px;}
-.slideMenu .menuBox ul li a:hover::after {display:block; content:""; position:absolute; left:0; top:50%; margin-top:-2px; width:100%; height:4px; background:yellowgreen; opacity:.5;}
-.slideMenu.active .dim {visibility:visible; opacity:1; transition:all .3s;}
-.slideMenu.active .menuBox {right:0; opacity:1; transition:all .3s;}
-
-.footer {margin:80px auto 0; padding:80px 8%; width:100%; max-width:1200px; background:#222; box-sizing:border-box;}
-
-.mask {position:fixed; bottom:-100%; left:0; z-index:1000; width:100%; height:100%; transition:bottom .5s;}
-.mask.active {bottom:0;}
-.mask.actived {bottom:100%;}
-.mask.m01 {background:yellowgreen;}
-.mask.m02 {background:seagreen;}
-.mask.m03 {background:slategray;}
-.loading {position:fixed; bottom:-367px; left:50%; z-index:1100; transform:translateX(-50%); transition:bottom .5s;}
-.loading.active {bottom:20px; text-align:center;}
-.loading.actived {bottom:100%;}
-
-
-/* animation */
-@keyframes scaleBounce {
-    5%, 15% {transform:scale(.9);}
-    10%, 20% {transform:scale(1.1);}
-    25%, 100% {transform:scale(1);}
-}
-
-@media (min-width:1421px) and (max-width:1555px) {
-    .header .menuButtonWrap {width:52px; height:52px;}
-    .header .menuButtonWrap .txtView {left:0; top:calc(100% + 16px); width:55px; text-align:center;}
-    .header .menuButtonWrap .txtView:after {font-size:14px;}
-}
-
-@media screen and (max-width:1420px) {
-    .header {height:60px; background:#fff;}
-    .header .bi {left:12px; top:10px; width:50px; height:50px;}
-    .header .bi a {line-height:20px; font-size:17px;}
-    .header .message {line-height:60px;}
-    .header.minSize .message {visibility:visible;}
-    .header .menuButtonWrap {top:5px; right:4px; width:50px; height:50px; border:none;}
-    .header .menuButtonWrap .txtView {display:none;}
-    .commonContainer {padding-top:60px;}
-}
-
-@media (min-width:961px) and (max-width:1280px) {
-    
-}
-@media (min-width:681px) and (max-width:960px) {
-    .projectList .list .item .detailWrap {opacity:1; background:none;}
-}
-@media screen and (max-width:680px) {
-    .commonContainer {padding:60px 4%;}
-    .mainContainer {width:92%;}
-    .projectList .list .item {float:none; margin-top:25px; padding-top:0; width:100%; background:none !important;}
-    .projectList .list .item:first-child {margin-top:0;}
-    .projectList .list .item > a {position:static;}
-    .projectList .list .item > a img {display:block; width:100%;}
-    .projectList .list .item .detailWrap {position:static; height:auto; background:none; opacity:1;}
-    .projectList .list .item .detail {position:static; transform:translateY(0); padding:0 10px; width:100%;}
-    .projectList .list .item .client,
-    .projectList .list .item .detail .bar,
-    .projectList .list .item .detail .date,
-    .projectList .list .item .detail .arrow {display:none;}
-    .projectList .list .item .detail .subject {margin-top:20px; color:#444; font-size:18px; text-align:left;}
-
-    .loading img {width:50%;}
-}
-</style>    
+<body> 
     <div id="wrap">
         <!-- header -->
         <header class="header">
@@ -245,30 +122,32 @@ button:active {cursor:url('../resources/images/common/cursor-click.png') 12 12, 
 
         <!-- footer -->
         <footer class="footer">
-            <div class="topRow">
-                <div class="info">
-                    <address class="address">
-                        부산 해운대구 센텀중앙로 97 
-                        센텀스카이비즈 A동 1602호, 1603호 
-                    </address>
-                    <p class="tel">070-7566-1981</p>
-                    <a href="javascript:;" class="btnViewMap" title="지도보기"></a>
+            <div class="innerBox">
+                <div class="topRow">
+                    <div class="info">
+                        <address class="address">
+                            부산 해운대구 센텀중앙로 97 
+                            센텀스카이비즈 A동 1602호, 1603호 
+                        </address>
+                        <p class="tel">070-7566-1981</p>
+                        <a href="javascript:;" class="btnViewMap" title="지도보기"></a>
+                    </div>
+                    <div class="btns">
+                        <a href="javascript:;" class="btn as">A/S신청</a>
+                        <a href="javascript:;" class="btn request">프로젝트 의뢰하기</a>
+                    </div>
                 </div>
-                <div class="btns">
-                    <a href="javascript:;" class="btn as">A/S신청</a>
-                    <a href="javascript:;" class="btn request">프로젝트 의뢰하기</a>
+                <div class="bottomRow">
+                    <div class="snsRow">
+                        <ul class="linkList">
+                            <li class="instagram"><a href="javascript:;" target="_blank">인스타그램</a></li>
+                            <li class="facebook"><a href="javascript:;" target="_blank">페이스북</a></li>
+                            <li class="pinterest"><a href="javascript:;" target="_blank">핀터레스트</a></li>
+                        </ul>
+                        <a href="javascript:;" class="btnLike"></a>
+                    </div>
+                    <p class="copyright">COPYRIGHT 2012-2019 STUDIO-JT. ALL RIGHTS RESERVED.</p>
                 </div>
-            </div>
-            <div class="bottomRow">
-                <div class="snsRow">
-                    <ul class="linkList">
-                        <li class="instagram"><a href="javascript:;" target="_blank">인스타그램</a></li>
-                        <li class="facebook"><a href="javascript:;" target="_blank">페이스북</a></li>
-                        <li class="pinterest"><a href="javascript:;" target="_blank">핀터레스트</a></li>
-                    </ul>
-                    <a href="javascript:;" class="btnLike"></a>
-                </div>
-                <p class="copyright">COPYRIGHT 2012-2019 STUDIO-JT. ALL RIGHTS RESERVED.</p>
             </div>
         </footer>
         <!-- //footer -->
@@ -287,70 +166,14 @@ button:active {cursor:url('../resources/images/common/cursor-click.png') 12 12, 
     <script type="text/javascript" src="../resources/js/common.js"></script>
     <script>
     $(function(){
-        //사이드 메뉴 show/hide
-        $('.menuButtonWrap').on('click', function(){
-            var $menuBox = $('.slideMenu');
-            $(this).toggleClass('active');
-            if($menuBox.hasClass('active')){
-                $menuBox.removeClass('active');
-            }else{
-                $menuBox.addClass('active');
-            }
-        });
-
-        //메시지 클릭 시 css애니메이션 토글
-        $('.header .message').on('click', function(){
-            $(this).toggleClass('stop');
-        });
-
+        //Move project detail        
         $('.projectList .item').on('click', function(){
             //page animation in
             pageMoveBetween();
+            setTimeout(function(){
+                location.href="project_detail.html";
+            }, 1500);
         })
-    });
-
-    //page animation in
-    function pageMoveBetween(){
-        setTimeout(function(){
-            $('.mask.m01').addClass('active');
-        }, 0);
-        setTimeout(function(){
-            $('.mask.m02').addClass('active');
-        }, 150);
-        setTimeout(function(){
-            $('.mask.m03').addClass('active');
-        }, 300);
-        setTimeout(function(){
-            $('.loading').addClass('active');
-        }, 450);
-        //page animation out
-        setTimeout(pageMoveFin, 2000);
-    }
-
-    //page animation out
-    function pageMoveFin(){
-        setTimeout(function(){
-            $('.loading').addClass('actived');
-        }, 0);
-        setTimeout(function(){
-            $('.mask.m03').addClass('actived');    
-        }, 150);
-        setTimeout(function(){
-            $('.mask.m02').addClass('actived');
-        }, 300);
-        setTimeout(function(){
-            $('.mask.m01').addClass('actived');
-        }, 450);
-    }
-
-    //page scroll event
-    $(window).scroll(function(){
-        var scTop = $(window).scrollTop();
-        if(scTop > 40){
-            $('header').addClass('minSize');
-        }else{
-            $('header').removeClass('minSize');
-        }
     });
     </script>
 </body>

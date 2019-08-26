@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="referrer" content="always">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=2.0">
+    <title>Accordian UI</title>
+    <link rel="stylesheet" href="../resources/css/reset.css">
+    <link rel="stylesheet" href="../resources/css/swiper.css">
+    <style>
+        h1 {line-height:52px; color:#fff; text-align:center; background:#111;}
+
+        .accordianGroup {margin:30px auto; max-width:680px;}
+        .accordian li {padding:0 10px; border:1px solid #000; border-top:0; transition:all .3s;}
+        .accordian li:first-child {border-top:1px solid #000;}
+        .accordian li a {display:block; padding:0 10px; height:40px; line-height:40px; color:#444; font-size:14px; font-weight:600;}
+        .accordian li .content {display:none; padding:15px 10px; line-height:20px; font-size:12px; border-top:1px solid #666;}
+        .accordian li.active {background:#999}
+        .accordian li.active a,
+        .accordian li.active .content {color:#fff;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1>Accodian UI</h1>
+        <div class="accordianGroup">
+            <nav class="accordian four">
+                <ul>
+                    <li>
+                        <a href="javascript:;">MENU01</a>
+                        <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, nisi. Aperiam perferendis maiores aliquam est amet voluptas ad nisi quibusdam, fuga tempora sapiente! Eos maxime eius, deserunt quod odit nisi!</p>
+                    </li>
+                    <li>
+                        <a href="javascript:;">MENU02</a>
+                        <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, nisi. Aperiam perferendis maiores aliquam est amet voluptas ad nisi quibusdam, fuga tempora sapiente! Eos maxime eius, deserunt quod odit nisi!</p>
+                    </li>
+                    <li>
+                        <a href="javascript:;">MENU03</a>
+                        <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, nisi. Aperiam perferendis maiores aliquam est amet voluptas ad nisi quibusdam, fuga tempora sapiente! Eos maxime eius, deserunt quod odit nisi!</p>
+                    </li>
+                    <li>
+                        <a href="javascript:;">MENU04</a>
+                        <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, nisi. Aperiam perferendis maiores aliquam est amet voluptas ad nisi quibusdam, fuga tempora sapiente! Eos maxime eius, deserunt quod odit nisi!</p>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Javascript -->
+    <script type="text/javascript" src="../resources/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../resources/js/swiper.min.js"></script>
+    <script>
+        var $tabMenuLi = $('.accordianGroup .accordian li'),
+            $tabContent = $('.accordianGroup .content');
+        /* type01 */
+        $('.accordianGroup .accordian li a').on('click', function(){
+            var i = $(this).parent('li').index();
+            if(!$(this).parent('li').hasClass('active')){
+                $tabMenuLi.removeClass('active').eq(i).addClass('active');
+                $tabContent.slideUp('fast').eq(i).slideDown('fast');
+            }
+            
+        });
+    </script>
+</body>
+</html>
