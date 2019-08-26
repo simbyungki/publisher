@@ -46,7 +46,8 @@
 .projectDetail .pDetailCont .summaryBox .summary {margin-top:30px; line-height:28px; color:#666; font-size:20px;}
 .projectDetail .pDetailCont .btnMove {display:block; margin-top:40px; width:200px; height:60px; line-height:60px; text-align:center; background:#444; border-radius:3px;}
 .projectDetail .pDetailCont .btnMove span {display:inline-block; position:relative; padding-right:50px; color:#fff; font-size:16px; font-weight:600;}
-.projectDetail .pDetailCont .btnMove span:after {display:block; content:"→"; position:absolute; right:0; top:50%; transform:translateY(-50%);}
+.projectDetail .pDetailCont .btnMove span:after {display:block; content:"→"; position:absolute; right:0; top:50%; transform:translateY(-50%); transition:all .2s;}
+.projectDetail .pDetailCont .btnMove span:hover:after {right:-5px;}
 
 .projectDetail .pDetailCont .actionCont {position:relative; top:20px; opacity:0; padding:100px 0; transition:all .5s;}
 .projectDetail .pDetailCont .actionCont.active {animation-name:actionCont; animation-duration:.6s; animation-timing-function:linear; top:0; opacity:1; transition:all .5s;}
@@ -147,10 +148,9 @@
                 <div class="topRow">
                     <div class="info">
                         <address class="address">
-                            부산 해운대구 센텀중앙로 97 
-                            센텀스카이비즈 A동 1602호, 1603호 
+                            경기도 김포시 풍무로 68번길 41
                         </address>
-                        <p class="tel">070-7566-1981</p>
+                        <p class="tel">010-3180-8524</p>
                         <a href="javascript:;" class="btnViewMap" title="지도보기"></a>
                     </div>
                     <div class="btns">

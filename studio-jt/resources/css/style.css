@@ -97,7 +97,7 @@ button:active {cursor:url('../images/common/cursor-click.png') 12 12, auto;}
                 */
 @media (min-width:1421px) and (max-width:1555px) {
     .header .menuButtonWrap {width:52px; height:52px;}
-    .header .menuButtonWrap .txtView {left:0; top:calc(100% + 16px); width:55px; text-align:center;}
+    .header .menuButtonWrap .txtView {left:0; top:calc(100% + 16px); width:52px; text-align:center;}
     .header .menuButtonWrap .txtView:after {font-size:14px;}
 }
 
