@@ -64,7 +64,7 @@
     <div id="wrap" class="projectView">
         <!-- header -->
         <header class="header">
-            <h1 class="bi"><a href="index.html">BYUN<br>LOGO</a></h1>
+            <h1 class="bi"><a href="index.html?second">BYUN<br>LOGO</a></h1>
             <p class="message">I <span>SEOUL</span> U</p>
             <button class="menuButtonWrap">
                 <span class="txtView"></span>
@@ -148,26 +148,20 @@
                 <div class="topRow">
                     <div class="info">
                         <address class="address">
+                            <strong>김포사무실</strong>
                             경기도 김포시 풍무로 68번길 41
                         </address>
                         <p class="tel">010-3180-8524</p>
                         <a href="javascript:;" class="btnViewMap" title="지도보기"></a>
                     </div>
-                    <div class="btns">
-                        <a href="javascript:;" class="btn as">A/S신청</a>
-                        <a href="javascript:;" class="btn request">프로젝트 의뢰하기</a>
-                    </div>
                 </div>
                 <div class="bottomRow">
-                    <div class="snsRow">
-                        <ul class="linkList">
-                            <li class="instagram"><a href="javascript:;" target="_blank">인스타그램</a></li>
-                            <li class="facebook"><a href="javascript:;" target="_blank">페이스북</a></li>
-                            <li class="pinterest"><a href="javascript:;" target="_blank">핀터레스트</a></li>
-                        </ul>
-                        <a href="javascript:;" class="btnLike"></a>
+                    <div class="snsRow linkList">
+                        <a href="javascript:;" target="_blank" class="instagram">인스타그램</a>
+                        <a href="javascript:;" target="_blank" class="facebook">페이스북</a>
+                        <a href="javascript:;" target="_blank" class="blog">블로그</a>
                     </div>
-                    <p class="copyright">COPYRIGHT 2012-2019 STUDIO-JT. ALL RIGHTS RESERVED.</p>
+                    <p class="copyright">COPYRIGHT 2012-2019 PROJECT BK. ALL RIGHTS RESERVED.</p>
                 </div>
             </div>
         </footer>
@@ -186,11 +180,9 @@
     <script type="text/javascript" src="../resources/js/swiper.min.js"></script>
     <script type="text/javascript" src="../resources/js/common.js"></script>
     <script>
-        //content animate
-        
+        var winH = $(window).height();
         $(function(){
             //detail header height set
-            var winH = $(window).height();
             $('.pDetailHeader').css({
                 'height': winH
             });
@@ -199,8 +191,11 @@
             });
 
             //page animation out
-            //$('.mask, .loading').addClass('active');
-            //setTimeout(pageMoveFin, 2000);
+            var getParam = location.search;
+            if(getParam){
+                $('.mask, .loading').addClass('active');
+                setTimeout(pageMoveFin, 2000);
+            }
         })
 
         //Contents animate
@@ -228,6 +223,13 @@
                     $aniCont.eq(i).removeClass('active');
                 }
             }
+
+            if(scTop > winH){
+                $('#wrap').removeClass('projectView').addClass('');
+            }else{
+                $('#wrap').addClass('projectView');
+            }
+            
         });
     </script>
 </body>
