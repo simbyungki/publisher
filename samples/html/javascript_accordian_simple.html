@@ -53,31 +53,19 @@
     <script type="text/javascript" src="../resources/js/swiper.min.js"></script>
     <script>
         $('.accordian li a').on('click', function(){
-            var $thisLi = $(this).parent('li');
-            var thisIdx = $thisLi.index();
             //클릭한 li가 활성 상태인지 체크 (active클래스를 갖고 있는지 여부)
-            if($thisLi.hasClass('active')){
+            if($(this).parent('li').hasClass('active')){
                 //활성화 상태라면,
-                hideItem(thisIdx);
+                $(this).parent('li').removeClass('active').children('.content').slideUp('fast');
             }else{
                 //비활성화상태라면,
                 //전체 초기화
-                reset();
+                $('.accordian li').removeClass('active');
+                $('.accordian li .content').slideUp();
                 //클릭한 li만 활성화
-                showItem(thisIdx);
+                $(this).parent('li').addClass('active').children('.content').slideDown('fast');
             }
         });
-
-        function reset(){
-            $('.accordian li').removeClass('active');
-            $('.accordian li .content').slideUp();
-        }
-        function showItem(idx){
-            $('.accordian li').eq(idx).addClass('active').children('.content').slideDown('fast');
-        }
-        function hideItem(idx){
-            $('.accordian li').eq(idx).removeClass('active').children('.content').slideUp('fast');
-        }
     </script>
 </body>
 </html>

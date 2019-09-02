@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="referrer" content="always">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=2.0">
+    <title>CSS resize image ratio</title>
+    <link rel="stylesheet" href="../resources/css/reset.css">
+    <link rel="stylesheet" href="../resources/css/swiper.css">
+    <style>
+        h1 {line-height:82px; color:#fff; text-align:center; background:#111;}
+        
+        .projectList {margin:40px auto 0; width:100%; max-width:720px; border:2px solid #000; box-sizing:border-box;}
+        .projectList .list {zoom:1;}
+        .projectList .list:after {display:block; content:""; clear:both;}
+        .projectList .list li {float:left; margin-top:20px; padding-top:50%; width:calc(50% - 10px);}
+        .projectList .list li:first-child,
+        .projectList .list li:nth-child(2) {margin-top:0;}
+        .projectList .list li:nth-child(2n) {margin-left:20px;}
+        .projectList .list li a {display:block;}
+    </style>
+
+</head>
+<body>
+    <div id="wrap">
+        <h1>CSS resize image ratio</h1>
+        <div class="projectList">
+            <ul class="list">
+                <li class="item" style="background:url('https://via.placeholder.com/350x420.png') no-repeat center; background-size:cover;">
+                    <a href="javascript:;"></a>
+                </li>
+                <li class="item" style="background:url('https://via.placeholder.com/350x420.png') no-repeat center; background-size:cover;">
+                    <a href="javascript:;"></a>
+                </li>
+                <li class="item" style="background:url('https://via.placeholder.com/350.png') no-repeat center; background-size:cover;">
+                    <a href="javascript:;"></a>
+                </li>
+                <li class="item" style="background:url('https://via.placeholder.com/400x450.png') no-repeat center; background-size:cover;">
+                    <a href="javascript:;"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Javascript -->
+    <script type="text/javascript" src="../resources/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../resources/js/swiper.min.js"></script>
+    <script>
+    $(function(){
+        
+    });
+    </script>
+</body>
+</html>
