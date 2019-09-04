@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="referrer" content="always">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=2.0">
+    <title>Scroll check</title>
+    <link rel="stylesheet" href="../resources/css/reset.css">
+    <link rel="stylesheet" href="../resources/css/swiper.css">
+    <style>
+        .pageTitle,
+        .bottomNav {position: fixed; left: 0; bottom: 0; width: 100%; height: 52px; line-height: 52px; color: #fff; text-align: center;}
+        .pageTitle {top: 0; background:#111;}
+        .bottomNav {bottom: -52px; background:#111; transition:bottom .2s;}
+        .bottomNav.show {bottom: 0; background:#111;}
+        article {padding: 52px 3% 0;}
+        article .block {padding: 20px; min-height: 500px;}
+        article .block p {line-height: 22px; color: #fff; font-size: 16px; font-weight: 600;}
+        article .block:nth-child(2n+1) {background: #999;}
+        article .block:nth-child(2n) {background: #222;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>                
+            <h1 class="pageTitle">Scroll check</h1>
+        </header>
+        <article>
+            <div class="block">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem mollitia accusamus sequi ipsa, rerum nam laboriosam, ipsam aperiam deleniti beatae expedita id quisquam veritatis corporis, voluptates ducimus molestiae eum adipisci.
+                </p>
+            </div>
+            <div class="block">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem mollitia accusamus sequi ipsa, rerum nam laboriosam, ipsam aperiam deleniti beatae expedita id quisquam veritatis corporis, voluptates ducimus molestiae eum adipisci.
+                </p>
+            </div>
+            <div class="block">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem mollitia accusamus sequi ipsa, rerum nam laboriosam, ipsam aperiam deleniti beatae expedita id quisquam veritatis corporis, voluptates ducimus molestiae eum adipisci.
+                </p>
+            </div>
+        </article>
+        <nav class="bottomNav">
+            바닥 고정 네비게이션
+        </nav>
+    </div>
+
+    <!-- Javascript -->
+    <script type="text/javascript" src="../resources/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../resources/js/swiper.min.js"></script>
+    <script>
+        //Javascript
+        var lastScrollTop = 0;
+        var delta = 5;
+        var fixBox = document.querySelector('.bottomNav');
+        var fixBoxHeight = fixBox.offsetHeight;
+        var didScroll;
+        //스크롤 이벤트 
+        window.onscroll = function(e) {
+            didScroll = true;
+        };
+
+        //0.25초마다 스크롤 여부 체크하여 스크롤 중이면 hasScrolled() 호출
+        setInterval(function(){
+            if(didScroll){
+                hasScrolled();
+                didScroll = false;
+            }
+        }, 250);
+
+        function hasScrolled(){
+            var nowScrollTop = window.scrollY;
+            if(Math.abs(lastScrollTop - nowScrollTop) <= delta){
+                return;
+            }
+            if(nowScrollTop > lastScrollTop && nowScrollTop > fixBoxHeight){
+                //Scroll down
+                fixBox.classList.remove('show');
+            }else{
+                if(nowScrollTop + window.innerHeight < document.body.offsetHeight){
+                    //Scroll up
+                    fixBox.classList.add('show');
+                }
+            }
+            lastScrollTop = nowScrollTop;
+        }
+    </script>
+</body>
+</html>
