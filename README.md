@@ -344,12 +344,11 @@ var $button = $('#button');
 2. ~~2019/08/25 : 과제 리뷰, 설명(jquery 이벤트), 실습 > tab 콘텐츠, > 과제 (PC실습 도미노피자 마무리)~~
     - ~~이벤트 : 클릭, resize, scroll, load ...~~
 3. ~~2019/09/01 : 과제 리뷰(슬라이더), 실습 > 아코디언(FAQ), 레이어팝업~~
-4. 과제 리뷰, 실습 > 아코디언(FAQ), 레이어팝업, 스크롤 위치에 따른 header 걸치기 UI
-5. 모바일 레이아웃 기본(실습), 웹 UI 만들기(css 햄버거 버튼)
-6. 반응형 웹 레이아웃 만들기 실습 (sample) > 과제 studio-jt 메인 마크업
-7. 과제 리뷰, 웹 UI 만들기 이미지 슬라이더(swiperjs) > 과제 studio-jt css
-8. 과제 리뷰, 실습 studio-jt
-9. 과제 리뷰, 실습 studio-jt
+4. ~~2019/09/08 : 과제 리뷰, 실습 > 아코디언(FAQ), 레이어팝업, 스크롤 위치에 따른 header 걸치기, UI 반응형 웹 레이아웃 만들기 실습 (sample)~~
+5. studio-jt 메인 작업 (비율 유지하는 이미지(item) 박스)
+6. studio-jt 메인 작업 (header)
+7. studio-jt 서브 작업
+8. studio-jt 서브 작업
 ...
 
 
