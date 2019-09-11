@@ -24,7 +24,7 @@ button {margin:0; padding:0; background:none; border:none; cursor:pointer;}
 
 /***** base *****/
 .ui-datepicker {display:none;}
-select {padding:0 42px 0 12px; height:38px; font-size:14px; color:#999; background:#fff url('../images/common/ico_selectbox_arrow.gif') no-repeat right center; border:1px solid #ccc; appearance:none; -webkit-appearance:none; box-sizing:border-box;}
+select {padding:0 42px 0 12px; height:38px; color:#999; background:#fff url('../images/common/ico_selectbox_arrow.gif') no-repeat right center; border:1px solid #ccc; appearance:none; -webkit-appearance:none; box-sizing:border-box;}
 select::-ms-expand {display:none;}
 
 /* placeholder color */

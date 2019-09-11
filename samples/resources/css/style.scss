@@ -23,30 +23,43 @@ main {
         margin:0 auto;
         max-width:980px;
         li {
+            margin-left:2%;
+            width:23.5%;
+            &:first-child {
+                margin-left:0;
+            }
             table {
+                width:100%;
+                table-layout:fixed;
                 thead {
                     th {
                         color:#fff;
-                        text-align:center;
+                        font-size:18px;
                         background:#222835;
+                    }
+                }
+                tbody {
+                    th {
+                        font-size:13px;
                     }
                 }
                 th,
                 td {
-                    font-size:18px;
                     vertical-align:middle;
                     border:1px solid #000;
                 }
                 th {
                     height:42px;
                     font-weight:600;
+                    text-align:center;
                     border-right:1px solid #ccc;
                 }
                 td {
+                    padding:0 10px;
                     a {
                         color:#444;
+                        font-size:13px;
                         &:hover {
-                            font-weight:600;
                             text-decoration:underline;
                         }
                     }
