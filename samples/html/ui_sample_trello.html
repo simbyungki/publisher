@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="referrer" content="always">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=2.0">
+    <title>Trello UI</title>
+    <link rel="stylesheet" href="../resources/css/reset.css">
+    <link rel="stylesheet" href="../resources/css/swiper.css">
+    <style>
+        body {background-color:olive;}
+        h1 {position:fixed; left:0; top:0; width:100%; line-height:82px; color:#fff; text-align:center; background:#111;}
+        .boxArea {padding:102px 20px 20px; overflow-y:auto; zoom:1;}
+        .boxArea:after {display:block; content:""; clear:both;}
+        .boxArea .group {float:left; margin:20px; padding:20px; width:20%; max-width:350px; min-width:250px; background:#e1e1e1; border-radius:6px; box-sizing:border-box; box-shadow:0 2px 2px rgba(0,0,0,.3);}
+        .boxArea .group li {position:relative; margin-top:10px; padding:10px 10px 20px; border-radius:6px; background:#fff;}
+        .boxArea .group li:first-child {margin-top:0;}
+        .boxArea .group li .bedges {margin-bottom:10px;}
+        .boxArea .group li .bedges span {display:inline-block; padding:5px; color:#fff; font-size:11px; background-color:orchid; border-radius:3px;}
+        .boxArea .group li .bedges .html {background-color:slateblue;}
+        .boxArea .group li .bedges .css {background-color:salmon;}
+        .boxArea .group li .title {font-size:13px;}
+        .boxArea .group li .members {position:absolute; right:0; bottom:0; padding:5px; text-align:right; font-size:0;}
+        .boxArea .group li .members li {display:inline-block; margin-left:5px; padding:8px; font-size:13px;}
+        .boxArea .group li .members li:nth-child(1) {background:#e5e5e5;}
+        .boxArea .group li .members li:nth-child(2) {background:#e1e1e1;}
+        .boxArea .ui-sortable-helper {box-shadow:0 10px 10px rgba(0,0,0,.2);}
+        .boxArea .ui-state-highlight {height:10px; border:1px dashed darkgray;}
+    </style>
+
+</head>
+<body>
+    <div id="wrap">
+        <h1>Trello UI</h1>   
+        <div class="boxArea">
+            <ul class="group">
+                <li>
+                    <a href="javascript:;">
+                        <div class="bedges">
+                            <span class="html">HTML</span>
+                            <span class="css">CSS</span>
+                        </div>
+                        <p class="title">1111타이틀들어가는 영역</p>
+                        <ul class="members">
+                            <li>조</li>
+                            <li>심</li>
+                        </ul>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <div class="bedges">
+                            <span class="html">HTML</span>
+                            <span class="css">CSS</span>
+                        </div>
+                        <p class="title">1112타이틀들어가는 영역</p>
+                        <ul class="members">
+                            <li>조</li>
+                            <li>심</li>
+                        </ul>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <div class="bedges">
+                            <span class="html">HTML</span>
+                            <span class="css">CSS</span>
+                        </div>
+                        <p class="title">1113타이틀들어가는 영역</p>
+                        <ul class="members">
+                            <li>조</li>
+                            <li>심</li>
+                        </ul>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <div class="bedges">
+                            <span class="html">HTML</span>
+                            <span class="css">CSS</span>
+                        </div>
+                        <p class="title">1114타이틀들어가는 영역</p>
+                        <ul class="members">
+                            <li>조</li>
+                            <li>심</li>
+                        </ul>
+                    </a>
+                </li>
+            </ul>
+            <ul class="group">
+                <li>
+                    <a href="javascript:;">
+                        <div class="bedges">
+                            <span class="html">HTML</span>
+                            <span class="css">CSS</span>
+                        </div>
+                        <p class="title">2221타이틀들어가는 영역</p>
+                        <ul class="members">
+                            <li>조</li>
+                            <li>심</li>
+                        </ul>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <div class="bedges">
+                            <span class="html">HTML</span>
+                            <span class="css">CSS</span>
+                        </div>
+                        <p class="title">2222타이틀들어가는 영역</p>
+                        <ul class="members">
+                            <li>조</li>
+                            <li>심</li>
+                        </ul>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <div class="bedges">
+                            <span class="html">HTML</span>
+                            <span class="css">CSS</span>
+                        </div>
+                        <p class="title">2223타이틀들어가는 영역</p>
+                        <ul class="members">
+                            <li>조</li>
+                            <li>심</li>
+                        </ul>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <div class="bedges">
+                            <span class="html">HTML</span>
+                            <span class="css">CSS</span>
+                        </div>
+                        <p class="title">2224타이틀들어가는 영역</p>
+                        <ul class="members">
+                            <li>조</li>
+                            <li>심</li>
+                        </ul>
+                    </a>
+                </li>
+            </ul>
+            <ul class="group">
+                <li>
+                    <a href="javascript:;">
+                        <div class="bedges">
+                            <span class="html">HTML</span>
+                            <span class="css">CSS</span>
+                        </div>
+                        <p class="title">3331타이틀들어가는 영역</p>
+                        <ul class="members">
+                            <li>조</li>
+                            <li>심</li>
+                        </ul>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <div class="bedges">
+                            <span class="html">HTML</span>
+                            <span class="css">CSS</span>
+                        </div>
+                        <p class="title">3332타이틀들어가는 영역</p>
+                        <ul class="members">
+                            <li>조</li>
+                            <li>심</li>
+                        </ul>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <div class="bedges">
+                            <span class="html">HTML</span>
+                            <span class="css">CSS</span>
+                        </div>
+                        <p class="title">3333타이틀들어가는 영역</p>
+                        <ul class="members">
+                            <li>조</li>
+                            <li>심</li>
+                        </ul>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <div class="bedges">
+                            <span class="html">HTML</span>
+                            <span class="css">CSS</span>
+                        </div>
+                        <p class="title">3334타이틀들어가는 영역</p>
+                        <ul class="members">
+                            <li>조</li>
+                            <li>심</li>
+                        </ul>
+                    </a>
+                </li>
+            </ul>
+            <ul class="group">
+                <li>
+                    <a href="javascript:;">
+                        <div class="bedges">
+                            <span class="html">HTML</span>
+                            <span class="css">CSS</span>
+                        </div>
+                        <p class="title">4441타이틀들어가는 영역</p>
+                        <ul class="members">
+                            <li>조</li>
+                            <li>심</li>
+                        </ul>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <div class="bedges">
+                            <span class="html">HTML</span>
+                            <span class="css">CSS</span>
+                        </div>
+                        <p class="title">4442타이틀들어가는 영역</p>
+                        <ul class="members">
+                            <li>조</li>
+                            <li>심</li>
+                        </ul>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <div class="bedges">
+                            <span class="html">HTML</span>
+                            <span class="css">CSS</span>
+                        </div>
+                        <p class="title">4443타이틀들어가는 영역</p>
+                        <ul class="members">
+                            <li>조</li>
+                            <li>심</li>
+                        </ul>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <div class="bedges">
+                            <span class="html">HTML</span>
+                            <span class="css">CSS</span>
+                        </div>
+                        <p class="title">4444타이틀들어가는 영역</p>
+                        <ul class="members">
+                            <li>조</li>
+                            <li>심</li>
+                        </ul>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Javascript -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="../resources/js/swiper.min.js"></script>
+    <script>
+        $(function(){
+            $('.boxArea').sortable();
+            $('.boxArea').disableSelection();
+            $('.boxArea .group').sortable({
+                connectWith: '.group',
+                placeholder: 'ui-state-highlight'
+            }).disableSelection();
+        });
+    </script>
+</body>
+</html>
