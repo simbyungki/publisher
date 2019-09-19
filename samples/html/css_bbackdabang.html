@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="referrer" content="always">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=2.0">
+    <title>intro</title>
+    <link rel="stylesheet" href="../resources/css/reset.css">
+    <link rel="stylesheet" href="../resources/css/swiper.css">
+    <style>
+        #wrap {padding-top:105px}
+
+        header {position:fixed; left:0; top:0; z-index:1000; width:100%; background:#fff;}
+        header h1 {line-height:52px; color:#fff; text-align:center; background:#111;}
+
+        main {position:relative; margin:0 auto; max-width:360px; height:560px; overflow:hidden; border:2px solid crimson;}
+        .box {position:absolute; left:50%; margin-left:-75%; width:150%; height:70%; transform-origin:center; animation-delay:.5s; animation-duration:.5s; animation-fill-mode:both; animation-timing-function:ease-in;}
+        .box.top {top:-20%; background-color:darkolivegreen; transform:rotate(-15deg); animation-name:moveTop;}
+        .box.bottom {bottom:-20%; background-color:goldenrod; transform:rotate(-15deg); animation-name:moveBottom;}
+        .title {position:absolute; top:50%; left:0; width:100%; transform:translateY(-50%); color:#fff; font-size:50px; font-weight:600; text-align:center;}
+
+        @keyframes moveTop {
+            from {
+                top:-20%;
+            }
+            to {
+                top:-30%;
+            }
+        }
+        @keyframes moveBottom {
+            from {
+                bottom:-20%;
+            }
+            to {
+                bottom:-30%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <h1>intro</h1>
+        </header>
+        <main role="main">
+            <div class="box top"></div>
+            <div class="box bottom"></div>
+            <p class="title">TITLE</p>
+        </main>
+    </div>
+
+    <!-- Javascript -->
+    <script type="text/javascript" src="../resources/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.ScrollMagic.js"></script>
+    <script>
+        
+    </script>
+</body>
+</html>
