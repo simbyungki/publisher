@@ -15,83 +15,112 @@
         header h1 {line-height:60px; color:#fff; text-align:center;}
 
         .loadingBox .dim {position:fixed; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,.7);}
-        .loadingBox .square {position:fixed; left:50%; top:50%; transform:translate(-50%, -50%); width:40px; height:40px;}
+        .loadingBox .square {position:fixed; left:50%; top:50%; transform:translate(-50%, -50%); width:40px; height:40px; animation:rotateBox 3.2s linear infinite;}
         .loadingBox .square span {position:absolute; background:#fff;}
         .loadingBox .square .top,
         .loadingBox .square .bottom {width:0; height:8px;}
         .loadingBox .square .right,
         .loadingBox .square .left {width:8px; height:0;}
         .loadingBox .square .top {left:0;
-            animation:top 1.5s linear both infinite;
+            animation:top .8s linear both infinite;
         }
         .loadingBox .square .right {right:0; top:0;
-            animation:right 1.5s linear both infinite;
+            animation:right .8s linear both infinite;
         }
         .loadingBox .square .bottom {right:0; bottom:0;
-            animation:bottom 1.5s linear both infinite;
+            animation:bottom .8s linear both infinite;
         }
         .loadingBox .square .left {left:0; bottom:0;
-            animation:left 1.5s linear both infinite;
+            animation:left .8s linear both infinite;
         }
 
         @keyframes top {
-             0% {
-                 width:0%;
-             }
-             12.5% {
-                 width:100%;
-             }
-             87.5% {
-                 width:100%;
-             }
-             100% {
+            0% {
                 width:0%;
-             }
+            }
+            12.5% {
+                width:100%;
+            }
+            87.5% {
+                width:100%;
+            }
+            100% {
+                width:0%;
+            }
         }
         @keyframes bottom {
-             25% {
-                 width:0%;
-             }
-             37.5% {
-                 width:100%;
-             }
-             62.5% {
-                 width:100%;
-             }
-             75% {
-                 width:0%;
-             }
+            25% {
+                width:0%;
+            }
+            37.5% {
+                width:100%;
+            }
+            62.5% {
+                width:100%;
+            }
+            75% {
+                width:0%;
+            }
         }
         @keyframes right {
             0% {
-                 height:0%;
-             }
-             12.5% {
-                 height:0%;
-             }
-             25% {
-                 height:100%;
-             }
-             75% {
-                 height:100%;
-             }
-             87.5% {
-                 height:0;
-             }
+                height:0%;
+            }
+            12.5% {
+                height:0%;
+            }
+            25% {
+                height:100%;
+            }
+            75% {
+                height:100%;
+            }
+            87.5% {
+                height:0;
+            }
         }
         @keyframes left {
             37.5% {
-                 height:0%;
-             }
-             50% {
-                 height:100%;
-             }
-             50% {
-                 height:100%;
-             }
-             62.5% {
                 height:0%;
-             }
+            }
+            50% {
+                height:100%;
+            }
+            50% {
+                height:100%;
+            }
+            62.5% {
+                height:0%;
+            }
+        }
+        @keyframes rotateBox {
+            0% {
+                transform:rotate(0deg);
+            }
+            15% {
+                transform:rotate(0deg);
+            }
+            25% {
+                transform:rotate(45deg);
+            }
+            40% {
+                transform:rotate(45deg);
+            }
+            50% {
+                transform:rotate(90deg);
+            }
+            65% {
+                transform:rotate(90deg);
+            }
+            75% {
+                transform:rotate(45deg);
+            }
+            90% {
+                transform:rotate(45deg);
+            }
+            100% {
+                transform:rotate(0deg);
+            }
         }
     </style>
 </head>
