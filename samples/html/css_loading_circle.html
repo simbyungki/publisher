@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="referrer" content="always">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=2.0">
+    <title>CSS Loading - rotate circle</title>
+    <link rel="stylesheet" href="../resources/css/reset.css">
+    <link rel="stylesheet" href="../resources/css/swiper.css">
+    <style>
+        #wrap {padding-top:70px;}
+
+        header {position:fixed; top:0; left:0; width:100%; height:60px; background:#444;}
+        header h1 {line-height:60px; color:#fff; text-align:center;}
+
+        .loadingBox .dim {position:fixed; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,.7);}
+        .loadingBox .circle {position:fixed; left:50%; top:50%; transform:translate(-50%, -50%); width:40px; height:40px; border:10px solid #fff; border-top:10px solid red; border-radius:50em; transition:all .2s;
+            animation-name:spinCircle;
+            animation-duration:.8s;
+            animation-iteration-count:infinite;
+            animation-timing-function:linear;
+        }
+
+        @keyframes spinCircle {
+            0% {
+                transform:translate(-50%, -50%) rotate(0);
+            }
+            50% {
+                transform:translate(-50%, -50%) rotate(180deg) scale(1.15);
+            }
+            100% {
+                transform:translate(-50%, -50%) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <h1>CSS Loading - rotate circle</h1>   
+        </header>
+        <div class="loadingBox">
+            <div class="dim"></div>
+            <div class="circle"></div>
+        </div>
+    </div>
+
+    <!-- Javascript -->
+    <script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+    <script>
+    
+    </script>
+</body>
+</html>

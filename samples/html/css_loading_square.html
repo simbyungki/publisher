@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="referrer" content="always">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=2.0">
+    <title>CSS Loading - fill bar</title>
+    <link rel="stylesheet" href="../resources/css/reset.css">
+    <link rel="stylesheet" href="../resources/css/swiper.css">
+    <style>
+        #wrap {padding-top:70px;}
+
+        header {position:fixed; top:0; left:0; width:100%; height:60px; background:#444;}
+        header h1 {line-height:60px; color:#fff; text-align:center;}
+
+        .loadingBox .dim {position:fixed; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,.7);}
+        .loadingBox .square {position:fixed; left:50%; top:50%; transform:translate(-50%, -50%); width:40px; height:40px;}
+        .loadingBox .square span {position:absolute; background:#fff;}
+        .loadingBox .square .top,
+        .loadingBox .square .bottom {width:0; height:8px;}
+        .loadingBox .square .right,
+        .loadingBox .square .left {width:8px; height:0;}
+        .loadingBox .square .top {left:0;
+            animation:top 1.5s linear both infinite;
+        }
+        .loadingBox .square .right {right:0; top:0;
+            animation:right 1.5s linear both infinite;
+        }
+        .loadingBox .square .bottom {right:0; bottom:0;
+            animation:bottom 1.5s linear both infinite;
+        }
+        .loadingBox .square .left {left:0; bottom:0;
+            animation:left 1.5s linear both infinite;
+        }
+
+        @keyframes top {
+             0% {
+                 width:0%;
+             }
+             12.5% {
+                 width:100%;
+             }
+             87.5% {
+                 width:100%;
+             }
+             100% {
+                width:0%;
+             }
+        }
+        @keyframes bottom {
+             25% {
+                 width:0%;
+             }
+             37.5% {
+                 width:100%;
+             }
+             62.5% {
+                 width:100%;
+             }
+             75% {
+                 width:0%;
+             }
+        }
+        @keyframes right {
+            0% {
+                 height:0%;
+             }
+             12.5% {
+                 height:0%;
+             }
+             25% {
+                 height:100%;
+             }
+             75% {
+                 height:100%;
+             }
+             87.5% {
+                 height:0;
+             }
+        }
+        @keyframes left {
+            37.5% {
+                 height:0%;
+             }
+             50% {
+                 height:100%;
+             }
+             50% {
+                 height:100%;
+             }
+             62.5% {
+                height:0%;
+             }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <h1>CSS Loading - fill bar</h1>   
+        </header>
+        <div class="loadingBox">
+            <div class="dim"></div>
+            <div class="square">
+                <span class="top"></span>
+                <span class="right"></span>
+                <span class="bottom"></span>
+                <span class="left"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Javascript -->
+    <script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+    <script>
+    
+    </script>
+</body>
+</html>
