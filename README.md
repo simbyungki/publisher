@@ -327,19 +327,19 @@ var $button = $('#button');
 
 
 ---
-## 레이아웃 실습
+<!-- ## 레이아웃 실습
 
 ### 실전 레이아웃
 - 다단 반응형 레이아웃 (/sample/layout_responsive.html)
-- 
+-  -->
 
 ### 레이아웃 실습
-#### PC - 도미노피자 (https://web.dominos.co.kr/main?locale=ko)
-
-#### Responsive - STUDIO-JT (https://studio-jt.co.kr/)
+#### PC - 네이버카페 메인 (https://section.cafe.naver.com/)
+#### Mobile - 네이버카페 메인 (https://m.cafe.naver.com/)
+<!-- #### Responsive - STUDIO-JT (https://studio-jt.co.kr/) -->
 
 ---
-## 진행 일정 (예상)
+<!-- ## 진행 일정 (예상)
 1. ~~2019/08/17 : 기초 설명 (html, css, javascript 이론) > 과제 (PC실습 도미노피자)~~  
 2. ~~2019/08/25 : 과제 리뷰, 설명(jquery 이벤트), 실습 > tab 콘텐츠, > 과제 (PC실습 도미노피자 마무리)~~
     - ~~이벤트 : 클릭, resize, scroll, load ...~~
@@ -348,12 +348,12 @@ var $button = $('#button');
 5. studio-jt 메인 작업 (비율 유지하는 이미지(item) 박스)
 6. studio-jt 메인 작업 (header)
 7. studio-jt 서브 작업
-8. studio-jt 서브 작업
+8. studio-jt 서브 작업 -->
 ...
 
 
 ### 웹 UI만들기 실습 목록
-1. ~~tab 콘텐츠 : 2019/08/25~~
+1. tab 콘텐츠
 2. 아코디언(FAQ)
 3. 레이어팝업
 4. 스크롤 위치에 따른 header 걸치기 UI
